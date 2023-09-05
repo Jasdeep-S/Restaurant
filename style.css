@@ -1,0 +1,743 @@
+/* Fonts Needed */
+@font-face {
+    font-family: 'Bison';
+    src: url(fonts/Bison-Bold\(PersonalUse\).ttf);
+}
+@font-face {
+    font-family: 'Quesha';
+    src: url(fonts/Quesha.ttf);
+}
+@font-face {
+    font-family: 'Signature';
+    src: url(fonts/Signature.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Bison';
+}
+
+/* Nav-Bar */
+.navbar .logo a{
+    color: #cccf06;
+    font-size: 70px;
+    font-family: 'Signature';
+    text-decoration: none;
+}
+.content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+.navbar{
+    position:fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 10px 0;
+    background: #0e0e0e;
+}
+.navbar .content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu-list{
+    display: inline-flex;
+}
+
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: #cccf06
+}
+.icon{
+    color: #e3e6ff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+/* Main Heading */
+.head{
+    justify-content: center;
+    color: #fff0f0;
+    padding-top: 300px;
+    font-size:12vh;
+    font-family: "Bison";
+    text-align: center;
+    
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(24, 24, 24, 0.7)), url(assets/restaurant.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Sub Heading */
+.subheading{
+    text-align: center;
+    color:#fff0f0;
+    font-size: 2vh;
+}
+
+/* Menu Button */
+#but{
+    text-align: center;
+}
+#btnOne{
+    border: 1px solid;
+    background: white;
+    padding: 10px 20px;
+    margin: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:#000000;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+#btnOne:hover{
+    background: rgba(95, 95, 95, 0.534);
+    color: rgb(255, 255, 255);
+}
+
+/* Quote Section */
+.quote{
+    height: 15vh;
+    width: 100%;
+    background: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.randQuote{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    font-family: 'Quesha';
+    text-align: center;
+    color:#fff0f0;
+    font-size: 4vh;
+}
+.person{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    font-family: 'Signature';
+    text-align: center;
+    color: #cccf06;
+    font-size: 5vh;
+    margin-top: 10px;
+}
+
+/* Popular Items Section */
+.menuPreview{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.918)), url(assets/chef.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#btnTwo{
+    border: 1px solid;
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:#000000;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+#btnTwo:hover{
+    background: rgba(95, 95, 95, 0.534);
+    color: rgb(255, 255, 255);
+}
+
+.title{
+    text-align: center;
+    color:#fff0f0;
+    font-size: 5vh;
+    margin: 50px;
+}
+.popItems{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.card{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    color: #fff0f0;
+    background: #000000;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.13);
+}
+.card:hover{
+    transition: all 1s;
+    background: #cccf06;
+    color:rgb(0, 0, 0)
+}
+.card-image{
+    background-color: #e3e6ff;
+    height: 400px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.car-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.445)), url(assets/food1.jpg)
+}
+.car-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.445)), url(assets/food2.jpg)
+}
+.car-3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.445)), url(assets/food3.jpg)
+}
+
+/* About Section */
+.about{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.918)), url(assets/pattern.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper{
+    margin: 50px auto;
+    width: 40%;
+    padding-bottom: 70px;
+}
+.aboutImg{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    max-width: 375px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+.text-box{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    color: #fff
+}
+.text-box p{
+    font-family: "Quesha";
+    font-size: 27px;
+}
+#btnThree{
+    border: 1px solid;
+    background:#cccf06;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:#000000;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+#btnThree:hover{
+    background: #818300;
+}
+
+/* Contact Section */
+.contact{
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0e0e0e;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 5vh;
+    font-weight: 500;
+    color: #fff
+}
+.contact .content p{
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+}
+.contact .content h1{
+    font-size: 18px;
+    color: #fff;
+}
+.res{
+    color:#cccf06;
+}
+.container{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icons{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    color: #cccf06;
+}
+.container .contactInfo .box .text p{
+    font-family: "Quesha";
+    font-size: 20px;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #070707;
+}
+.contactForm h2{
+    font-size: 30px;
+    font-weight: 500px;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input, 
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #7a7a7a;
+    outline: none;
+    resize: none;
+    background: #070707;
+    color: white;
+}
+.contactForm .inputBox span{
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm form h1{
+    color: white;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color:#cccf06;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #cccf06;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+    background: #818300;
+}
+
+/* Gallery Section */
+.titlee{
+    background-color: #0e0e0e;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 5vh;
+}
+.gallery{
+    background-color: #0e0e0e;
+    height: 100%;
+    width: 100%;
+}
+.imgContainer{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    max-width: 1224px;
+    width: 70%;
+    margin: auto;
+    padding: 40px;
+}
+.photoGallery{
+    display: flex;
+    gap: 20px;
+}
+.column{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.photo {
+    position: relative;
+    display: inline-block;
+}
+.photo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.6));
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Footer Section */
+.footer{
+    background: #cccf06;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.footer h1{
+    padding: 50px;
+    text-align: center;
+    color: #989b05;
+}
+
+
+/* Menu.html */
+.menuBackground{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(24, 24, 24, 0.7)), url(assets/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.menu{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.918)), url(assets/pattern.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+}
+.menuItems{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.menuBox{
+    color: #fff0f0;
+    background: #000000;
+    width: 500px;
+    height: 700px;
+    margin: 25px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.13);
+}
+.menuItems .menuBox h2{
+    padding: 7%;
+    font-size: 5vh;
+    color:#cccf06;
+    text-align: center;
+}
+.menuItems .menuBox h1{
+    font-family: "Quesha";
+    font-size: 3vh;
+    font-weight: lighter;
+    padding-left: 10%;
+}
+.price{
+    font-family: "Quesha";
+    font-size: 2vh;
+    color:#cccf06
+}
+.menuItems .menuBox p{
+    font-family: "Quesha";
+    font-size: 2vh;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+hr.solid {
+    margin: 15px 10% 15px;
+    border-top: 2px solid #c5c5c5;
+}
+
+/* about.html */
+.aboutBackground{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgba(24, 24, 24, 0.7)), url(assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.values{
+    height: 100%;
+    width: 100%;
+    background-color: #070707;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+}
+.topValues{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+}
+.valueBox{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+
+    color: #fff0f0;
+    background: #000000;
+    width: 350px;
+    height: 400px;
+    margin: 25px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.13);
+}
+.topValues .valueBox h2{
+    padding: 7%;
+    font-size: 4vh;
+    color:#cccf06;
+    text-align: center;
+}
+.topValues .valueBox h1{
+    font-size: 4vh;
+    color:#ffffff;
+    text-align: center;
+}
+.topValues .valueBox p{
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: "Quesha";
+    padding: 10px;
+    margin: 35px;
+}
+.ti{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.photo:hover::before {
+    opacity: 0;
+}
+
+.show{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+@media (max-width: 868px){
+    /* navbar */
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width:100%;
+        max-width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu-list.active{
+        left: 0%;
+
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+    }
+
+ 
+    /* Quote */
+    .randQuote, .person{
+        font-size:3vh;
+    }
+    
+    /* Contact */
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo, .contactForm{
+        width: 100%;
+    }
+
+
+    /* About */
+    .wrapper{
+        width: 70%;
+    }
+    .aboutImg{
+        max-width: 300px;
+        float: left;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        margin-right: 50px;
+    }
+
+    /* Gallery */
+    .photoGallery{
+        flex-direction: column;
+    }
+
+    /* footer */
+    .footer{
+        padding: 15px;
+        flex-direction: column;
+    }
+    .openingHours{
+        margin-left: 0px;
+    }
+    .footer h1{
+        font-size: 28px;
+        padding-left: 0x;
+    }
+    .footer p{
+        font-size: 25px;
+        margin: 0px;
+        padding-left: 12px;
+        font-family: "Quesha";
+    }
+    .mapContainer{
+        display: none;
+    }
+
+    /* Menu */
+    .menuBox{
+        height: 600px;
+    }
+    .menuItems .menuBox h1 {
+        padding-left: 10%;
+    }
+    .menuItems .menuBox p {
+        padding-left: 10%;
+    }
+}
+
+
+
+

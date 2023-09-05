@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Restaurant</title>
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!--JavaScript-->
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <!-- Nav-Bar -->
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="home.html">Restaurant</a></div>
+
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav-Bar Close -->
+
+
+    <!-- Header -->
+    <section class="background">
+        <div class="head">Restaurant</div>
+    
+        <p class="subheading">Culinary Excellence in Every Bite.</p>
+        <div id="but">
+            <button id="btnOne" type="button" onclick="menuRedirect()">View Menu.</button>
+        </div>
+    </section>
+    <!-- Header Close -->
+
+
+    <!-- Quote -->
+    <section class="quote">
+        <p class="randQuote">"Discover a culinary journey that embraces global tastes." <br> <span class="person"> - John Doe</span></p>
+    </section>
+    <!-- Quote Close -->
+
+
+    <!-- Popular Items -->
+    <section class="menuPreview">
+        <p class="title">Popular Items</p>
+
+        <section class="popItems">
+            <div class="card">
+                <div class="card-image car-1" ></div>
+                <h2>Rib Eye Steak</h2>
+                <p>$120.00</p>
+            </div>
+            <div class="card">
+                <div class="card-image car-2"></div>
+                <h2>Tomahawk</h2>
+                <p>$265.00</p>
+            </div>
+            <div class="card">
+                <div class="card-image car-3"></div>
+                <h2>Sweet Potato Fries</h2>
+                <p>$9.00</p>
+            </div>
+
+        </section>
+
+        <div id="but">
+            <button id="btnTwo" type="button" onclick="menuRedirect()">Full Menu.</button>
+        </div>
+    </section>
+    <!-- Popular Items Close -->
+
+
+    <!-- About -->
+    <section class="about">
+        <p class="title" id="about">Our Story</p>
+        
+        <div class="wrapper">
+            <img class="aboutImg" src="assets/about.jpg" alt="About Image">
+            <div class="text-box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis maximus est, at 
+                    imperdiet mauris molestie finibus. Mauris egestas at risus vitae pulvinar. Proin 
+                    finibus ornare metus vitae auctor. Proin fermentum neque nunc.
+                </p>
+                <div id="learnMore">
+                    <button id="btnThree" type="button" onclick="aboutRedirect()">Learn More.</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Close -->
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <h2>Contact Us!</h2>
+            <p>To make a <span class="res">reservation</span>, kindly give us a call.</p>
+            <h1>open 8am to 10pm everyday.</h1>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icons"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>1818 Street Road,<br>Toronto, Ontario,<br>M6A100</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone Number</h3>
+                        <p>123-456-1818</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Social Media</h3>
+                        <p>@restaurant<br>on Twitter & Instagram</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="contactForm">
+                <form>
+                    <h1>Send Message</h1>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send!">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Close -->
+
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2 class="titlee">Gallery</h2>
+        <div class="imgContainer">
+            <div class="photoGallery">
+                <div class="column">
+                    <div class="photo">
+                        <img src="assets/bundo-kim-Pb9bUzH1nD8-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/davey-gravy-DmO662qvWO8-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src="assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/jonathan-borba-uB7q7aipU2o-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/jason-leung--eKZLpj7U0E-unsplash.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src="assets/marissa-grootes-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/casey-lee-awj7sRviVXo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Close -->
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <h1>&copy; Restaurant 2023</h1>
+    </section>
+    <!-- Footer Close -->
+</body>
